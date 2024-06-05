@@ -1,4 +1,4 @@
-import { useState, useId, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { nanoid } from "nanoid"
 import Confetti from 'react-confetti'
 import './App.css'
