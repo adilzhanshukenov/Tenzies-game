@@ -4,6 +4,8 @@ import Confetti from 'react-confetti'
 import './App.css'
 import Die from './components/Die'
 
+import {dice1,dice2,dice3,dice4,dice5,dice6} from "./assets/dice-img"
+
 
 function App() {
 
@@ -41,7 +43,7 @@ function App() {
         {...die, id: nanoid(), value: randomNumber} :
         die
       }))
-      setCountRolls(prevCount => prevCount + 1)
+      {isActive && setCountRolls(prevCount => prevCount + 1)}
     } else { 
       resetGame()
     }
@@ -84,12 +86,38 @@ function App() {
     return () => clearInterval(interval);
   }, [isActive, seconds]);
 
+  function whichDie(die) {
+    switch (die) {
+      case 1:
+        return dice1;
+        break;
+      case 2:
+        return dice2;
+        break;
+      case 3:
+        return dice3;
+        break;
+      case 4:
+        return dice4;
+        break;
+      case 5:
+        return dice5;
+        break;
+      case 6:
+        return dice6;
+        break;
+      default:
+        return dice1;
+    }
+  }
+
   const diceElements = dice.map(die => 
     <Die 
       key={die.id}
       value={die.value}
       isHeld={die.isHeld}
       holdDice={() => holdDice(die.id)}
+      diepic={whichDie(die.value)}
     />  
   )
 
