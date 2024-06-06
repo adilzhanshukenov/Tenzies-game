@@ -14,18 +14,18 @@ main {
   display: flex;
   place-items: center;
   flex-direction: column;
-  padding: 25px;
+  padding: 0 25px;
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-  margin: 20px;
+  margin: 0;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   margin: 0;
   font-weight: 400;
@@ -42,7 +42,7 @@ button {
   color: white;
   font-weight: 700;
   cursor: pointer;
-  transition: box-shadow 0.4s ease;
+  /*transition: box-shadow 0.4s ease;*/
 }
 
 
@@ -51,7 +51,11 @@ button:active {
 }
 
 .main--text {
-  width: 60%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container {
@@ -86,4 +90,12 @@ padding: 0;
 
 .roll-button {
   font-size: large;
+}
+
+.rolls-sec {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
 }
