@@ -6,7 +6,7 @@ function Die(props)  {
 
     return(
         <div onClick={props.holdDice} className="die-face" style={styles}>
-            <h2 className="die-text">{props.value}</h2>
+            <img src={props.diepic} alt="diepic" />
         </div>
     )
 }
